@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, and cite OpenMMLab and the papers of the models you use (cfm_model_zoo/configs/README.md, Attribution)."
+title: "CFM-Model-Zoo: a library of split vision models for compression for machines"
+type: software
+authors:
+  - family-names: "Harell"
+    given-names: "Alon"
+version: 0.1.0
+repository-code: "https://github.com/picagrad/CFM-Model-Zoo"

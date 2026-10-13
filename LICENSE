@@ -1,0 +1,22 @@
+CFM-Model-Zoo Academic Use License
+
+Copyright (c) 2026 Alon Harell. All rights reserved.
+
+Permission is granted, free of charge, to use, copy, modify and redistribute this software (its code and
+configuration files) for academic research and teaching only, provided that:
+
+1. this copyright notice and this license are kept with every copy or modified version; and
+2. the software, and anything derived from it, is not used for any commercial purpose.
+
+Any other use, including any commercial use, requires prior written permission from the author.
+
+Pretrained checkpoints are not distributed with it; they are downloaded from their publishers (OpenMMLab;
+Microsoft's Swin-Transformer-Object-Detection; for GLIP and GroundingDINO's language model, bert-base-uncased
+from the Hugging Face Hub) and remain under those publishers' terms. Third-party components keep their own
+licences; see NOTICE and third_party_licenses/.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.

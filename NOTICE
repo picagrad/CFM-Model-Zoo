@@ -1,0 +1,53 @@
+CFM-Model-Zoo
+Copyright 2026 Alon Harell
+
+CFM-Model-Zoo is for academic use only: see LICENSE. Third-party
+components keep their own licences; their texts are in third_party_licenses/.
+
+This product includes software and configuration files from OpenMMLab
+(https://github.com/open-mmlab), licensed under the Apache License, Version 2.0, and
+redistributed here with that licence: third_party_licenses/MMDetection-LICENSE.txt and
+third_party_licenses/MMSegmentation-LICENSE.txt.
+
+Third-party material
+
+OpenMMLab-derived files, and how:
+
+- cfm_model_zoo/configs/: model configuration files derived from MMDetection's
+  configs (Copyright OpenMMLab). Some were renamed, merged with their _base_ files
+  or edited (for example dataset paths).
+- cfm_model_zoo/split_backbones.py: split_forward re-implements, split in two, the
+  forward() of MMDetection's and MMSegmentation's ResNet and SwinTransformer backbones.
+- cfm_model_zoo/split_models.py: compatibility patches to MMDetection's BERT
+  language-model wrapper; the Split classes subclass MMDetection / MMSegmentation models.
+
+RepPointsV2 code (cfm_model_zoo/legacy/):
+
+- cfm_model_zoo/legacy/ is ported from the Mask RepPoints V2 code of Microsoft's
+  Swin-Transformer-Object-Detection
+  (https://github.com/SwinTransformer/Swin-Transformer-Object-Detection), licensed under
+  the Apache License, Version 2.0: see
+  third_party_licenses/Swin-Transformer-Object-Detection-LICENSE.txt. That code builds on
+  MMDetection v2 and the RepPoints V2 implementation (https://github.com/Scalsol/RepPointsV2),
+  and includes code adapted from CornerNet (https://github.com/princeton-vl/CornerNet;
+  corner pooling, Gaussian focal loss).
+- Its CondConv mask head (condconv.py) is modified from AdelaiDet's CondInst
+  (https://github.com/aim-uofa/AdelaiDet), and its ATSSAssignerV2 (assigners.py) is adapted
+  from ATSS (https://github.com/sfzhang15/ATSS). AdelaiDet and ATSS are licensed for
+  non-commercial purposes only (third_party_licenses/AdelaiDet-LICENSE.txt and
+  third_party_licenses/ATSS-LICENSE.txt), which is why this package excludes commercial use.
+- RepPoints V2 is licensed under the MIT License, Copyright (c) Microsoft Corporation:
+  see third_party_licenses/RepPoints-LICENSE.txt (the LICENSE file of the repository above).
+- CornerNet is licensed under the BSD 3-Clause License, Copyright (c) 2018, University of
+  Michigan: see third_party_licenses/CornerNet-LICENSE.txt.
+
+Pretrained weights
+
+No pretrained weights are distributed with this package. They are downloaded from their
+publishers and remain under the publishers' terms: OpenMMLab's (through mim, and for the two
+DDQ-DETR models from OpenMMLab's download server); for RepPointsV2, the Mask RepPoints
+V2 Swin-T 3x release of Microsoft's Swin-Transformer-Object-Detection; and, for GLIP and
+GroundingDINO's language model, bert-base-uncased from the Hugging Face Hub (downloaded by
+transformers on first use).
+
+See cfm_model_zoo/configs/README.md, "Attribution", for the papers to cite.

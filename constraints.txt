@@ -1,0 +1,12 @@
+# The versions CFM-Model-Zoo was verified with (split-vs-unsplit checks and a clean-image install test).
+# Use with the install in README.md: uv pip install ... -c constraints.txt
+# MMCV 2.1.0 is built from source by scripts/build_mm_libs.sh and is not listed here.
+torch==2.6.0
+torchvision==0.21.0
+mmengine==0.10.7
+mmdet==3.3.0
+mmsegmentation==1.2.2
+transformers==5.1.0
+numpy==2.4.2
+opencv-python==4.13.0.92
+ftfy==6.3.1

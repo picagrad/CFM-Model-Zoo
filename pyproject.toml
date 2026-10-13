@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cfm-model-zoo"
+version = "0.1.0"
+description = "A library of split vision models for compression for machines, built on OpenMMLab: each model split at a backbone cut point into a frontend and a backend."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Alon Harell" }]
+license = { file = "LICENSE" }
+dependencies = [
+    "torch>=2.6",
+    "numpy",
+    "mmengine>=0.10.7,<0.11",
+    "openmim",
+    "requests",
+]
+
+[project.optional-dependencies]
+detection = ["mmdet==3.3.0", "transformers>=5", "pycocotools"]
+segmentation = ["mmsegmentation==1.2.2", "ftfy", "regex"]   # mmseg imports both on every model import but does not declare them
+
+[tool.setuptools]
+packages = ["cfm_model_zoo", "cfm_model_zoo.legacy"]
+license-files = ["LICENSE", "NOTICE", "third_party_licenses/*"]
+
+[tool.setuptools.package-data]
+cfm_model_zoo = ["configs/*.py", "configs/*/*.py", "configs/README.md"]
